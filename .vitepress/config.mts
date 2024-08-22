@@ -26,6 +26,23 @@ export default defineConfig({
           { text: 'About Protocol', link: '/protocol/overview' }
         ]
       },
+      {
+        text: 'Protocol',
+        items: [
+          { text: 'Overview 📃', link: '/protocol/overview' },
+          { text: 'Problem in the market', link: '/protocol/problem' },
+          { text: 'Why On-Chain Reputation?', link: '/protocol/why-reputation' },
+          { text: 'Technical Architecture', link: '/protocol/architecture' },
+          {
+            text: 'Protocol Components', collapsed: false, link: '/protocol/components', items: [
+              {
+                text: 'On-Chain Attestations',
+                link: '/protocol/overview'
+              }
+            ]
+          }
+        ]
+      }
     ],
 
     socialLinks: [
