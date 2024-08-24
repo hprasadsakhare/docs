@@ -15,7 +15,7 @@ hero:
       link: /quickstart
     - theme: alt
       text: About Protocol
-      link: /protocol/overview
+      link: /lightpaper/overview
 
 features:
   - icon: '✅'

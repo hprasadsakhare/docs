@@ -23,24 +23,34 @@ export default defineConfig({
         text: 'Introduction',
         items: [
           { text: 'Quickstart ⚡️', link: '/quickstart' },
-          { text: 'About Protocol', link: '/protocol/overview' }
+          { text: 'About Protocol', link: '/lightpaper/overview' }
         ]
       },
       {
-        text: 'Protocol',
+        text: 'Protocol Lightpaper',
         items: [
-          { text: 'Overview 📃', link: '/protocol/overview' },
-          { text: 'Problem in the market', link: '/protocol/problem' },
-          { text: 'Why On-Chain Reputation?', link: '/protocol/why-reputation' },
-          { text: 'Technical Architecture', link: '/protocol/architecture' },
+          { text: 'Overview 📃', link: '/lightpaper/overview' },
+          { text: 'Problem in the market', link: '/lightpaper/problem' },
+          { text: 'Why On-Chain Reputation?', link: '/lightpaper/why-reputation' },
+          { text: 'Technical Architecture', link: '/lightpaper/architecture' },
           {
-            text: 'Protocol Components', collapsed: false, link: '/protocol/components', items: [
+            text: 'Protocol Components', collapsed: false, link: '/lightpaper/protocol/attestations', items: [
               {
                 text: 'On-Chain Attestations',
-                link: '/protocol/overview'
+                link: '/lightpaper/protocol/attestations'
+              },
+              {
+                text: 'Algorithm Module',
+                link: '/lightpaper/protocol/reputation'
+              },
+              {
+                text: 'Reputation Utility Module',
+                link: '/lightpaper/protocol/utility'
               }
             ]
-          }
+          },
+          { text: 'Reputation Subjectiveness', link: '/lightpaper/subjective' },
+          { text: 'Our Mission', link: '/lightpaper/mission' },
         ]
       }
     ],

@@ -5,7 +5,7 @@ lang: en-US
 ---
 ![True Network Header](/assets/reputation-header.png)
 
-# True Network's Protocol Overview
+# True Network's Protocol Lightpaper
 
 True Network is an on-chain reputation protocol that enables dApps to give users on-chain attestations and build reputation models based on their activities. It is one of the most feature-rich protocols, supporting all popular ecosystems, including EVM, Solana, and Polkadot.
 
