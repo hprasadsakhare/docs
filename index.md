@@ -7,7 +7,7 @@ hero:
   text: "Documentation"
   tagline: "Create Schemas, Attest On-Chain & Build Reputation Algorithms for your apps easily."
   image: 
-    src: /assets/kalpvriksh.png
+    src: kalpvriksh.png
     alt: "Kalpvriksh"
   actions:
     - theme: brand

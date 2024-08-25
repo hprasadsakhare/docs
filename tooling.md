@@ -6,6 +6,12 @@ lang: en-US
 
 # Tips & Tooling
 
+True Network has launched its private testnet, called the [Raman Network](https://raman.truenetwork.io), named after [C.V. Raman](https://en.wikipedia.org/wiki/C._V._Raman), the Indian scientist who discovered the Raman Effect. The current infrastructure of the Raman Network serves as version 0.1 of the True Network protocol. We already have a few dApps showing interest in building on top of it.
+
+Raman Network includes early versions of three core pallets: Issuer, Credential, and Algorithm. Projects can register themselves as issuers and begin providing on-chain attestations to users within the Polkadot ecosystem in seconds.
+
+---
+
 Let's first take a look at the tools we've built to help you get started quickly.
 
 - **Reputation CLI** ([link](https://www.npmjs.com/package/reputation-cli))<br/>

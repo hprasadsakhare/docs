@@ -10,7 +10,7 @@ export default defineConfig({
   title: "True Network's Docs",
   description: "True Network provides the infrastructure for dApps to give on-chain attestations & build reptuation systems easily in minutes.",
   themeConfig: {
-    logo: '/assets/logo.png',
+    logo: 'logo.png',
     
     nav: [
       { text: 'Home', link: '/' },
