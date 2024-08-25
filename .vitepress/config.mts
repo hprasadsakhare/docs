@@ -23,7 +23,7 @@ export default defineConfig({
         text: 'Introduction',
         items: [
           { text: 'Quickstart ⚡️', link: '/quickstart' },
-          { text: 'About Protocol', link: '/lightpaper/overview' }
+          { text: 'Tips & Tooling', link: '/tooling' }
         ]
       },
       {
