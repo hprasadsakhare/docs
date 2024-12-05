@@ -35,6 +35,8 @@ In your existing or new project, use the Reputation CLI to set up the True Netwo
   ```
   Answer some questions the CLI ask to quickly get you started. 
 
+  Note: The `reputation-cli` init command creates a secret private key for the issuer in the **.env** file. If you're using Next.js, you should add the `NEXT_PUBLIC_` prefix to this key in both the **.env and true.config.ts** files.
+
 - A new configuration file, `true.config.ts`, will be created in the `true-network` directory. Additionally, some environment variables will be added to the **.env file** for the private key used by the issuer to perform attestations.
 
 - You will likely need some funds to carry out follow-up transactions with this new private key. To obtain testnet tokens, request them from the [community](https://at.truenetwork.io/community) using the address specified in the configuration file. Look for your wallet address inside the file `true.config.ts`, under `true-network` directory.
