@@ -16,49 +16,52 @@ An attestation on True Network can be made simply by creating a typescript type 
 Firstly, you can start by creating a schema object for the attestation you want to make. These schemas automatically gets converted to structures that are stored on-chain.
 
 ```typescript
-import { Schema, U32, U64 } from "@truenetworkio/sdk"
+  import { Hash, Schema, U32, U64 } from "@truenetworkio/sdk"
 
-// Creating Schema Type.
-type DayScore = {
-  score: U32,
-  durationSpent: U64,
-  treesClimbedPerDay: U64,
-  villansKilled: U32
-}
-
-// Initiating Schema Object with a default value.
-export const dayScoreSchema = new Schema<DayScore>({
-  score: new U32(0),
-  durationSpent: new U64(0),
-  treesClimbedPerDay: new U64(0),
-  villansKilled: new U32(0)
-})
+  export const gamePlaySchema = Schema.create({
+    score: U32,
+    durationSpent: U64,
+    treesClimbedPerDay: U64,
+    villansKilled: U32
+  })
 ```
 
 - **Attesting to the User:**
 Making an on-chain attestation to the user, just by calling `attest` method of the schema object.
 
 ```typescript
-import { U32, U64 } from '@truenetworkio/sdk'
-import { dayScoreSchema } from './schemas'
-import { getTrueNetworkInstance } from './true-network/true.config'
 
-const main = async () => {
-  const api = await getTrueNetworkInstance()
+  import { U32, U64 } from '@truenetworkio/sdk'
+  import { gamePlaySchema } from './schemas'
+  import { getTrueNetworkInstance } from './true-network/true.config'
 
-  // User who gets attested.
-  const user = '5HYYeCa1Hae5YYGJ2pHskHLVrA7V5WjaSuSbntidhhD9qqgs'
+  const attestGamePlayToUser = async () => {
+    const api = await getTrueNetworkInstance()
 
-  // Making on-chain attestation to the user.
-  await dayScoreSchema.attest(api, user, {
-    score: new U32(41),
-    durationSpent: new U64(15000),
-    treesClimbedPerDay: new U64(10),
-    villansKilled: new U32(21)
-  })
+    // Solana User's Address.
+    const solanaUserWallet = 'Ap67uX5zrvVAEt5TuFnk9J2w8fFZpht9FAtTdhxViViM'
 
-  await api.network.disconnect()
-}
+    // Ethereum User's Address.
+    const ethereumUserWallet = '0x4838B106FCe9647Bdf1E7877BF73cE8B0BAD5f97'
+
+    // Polkadot User's Address.
+    const polkadotUserWallet = '5DHrzaEFnNrwhMy4LqRs43zp8rNAhaEhXNqNMZ9bpZZevCqE'
+
+    const output = await gamePlaySchema.attest(api, ethereumUserWallet, {
+      score: 5,
+      durationSpent: 11,
+      treesClimbedPerDay: 23,
+      villansKilled: 3
+    })
+
+    // Output is usually the transaction hash for verification on-chain.
+    console.log(output)
+
+    // Make sure to disconnect the network after operation(s) is done.
+    await api.network.disconnect()
+  }
+
+  attestGamePlayToUser()
 
 ```
 

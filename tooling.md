@@ -23,7 +23,7 @@ The SDK provides a simple interface for building server-side and client-side app
   > Note: We recommend setting up the SDK environment in your project using our CLI, which handles all the necessary initial setup.
 
 
-- **Polkadot.js Explorer** ([link](https://truenetwork.io/explorer/raman))<br/>
+- **Blockchain Explorer** ([link](https://truenetwork.io/explorer/raman))<br/>
 Explore the chain state, view transactions sent on-chain, and observe the extrinsics being called. While the explorer provides insights, it's not the best platform for creating and calling extrinsics directly, as byte conversion issues might occur. These are better handled within the SDK.
 
 - **Example Repository** ([link](https://github.com/TrueNetworkIO/true-example))<br/>

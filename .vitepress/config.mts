@@ -6,12 +6,13 @@ export default defineConfig({
     hostname: 'https://docs.truenetwork.io'
   },
 
-  head: [['link', { rel: 'icon', href: '/assets/logo.png' }]],
-  title: "True Network's Docs",
+  head: [['link', { rel: 'icon', href: '/assets/symbol.png' }], ['title', {}, 'True Network Docs']],
+  title: "Docs",
+
+  titleTemplate: "True Network",
   description: "True Network provides the infrastructure for dApps to give on-chain attestations & build reptuation systems easily in minutes.",
   themeConfig: {
-    logo: 'logo.png',
-    
+    logo: 'symbol.png',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Quickstart', link: '/quickstart' },
@@ -23,6 +24,7 @@ export default defineConfig({
         text: 'Introduction',
         items: [
           { text: 'Quickstart ⚡️', link: '/quickstart' },
+          { text: 'Attestations & Types', link: '/attestation' },
           { text: 'Tips & Tooling', link: '/tooling' }
         ]
       },
