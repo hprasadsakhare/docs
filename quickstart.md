@@ -140,7 +140,7 @@ reputation-cli setup acm
 3. Prepare, this step involes creation of memory reading class for the algorithm. This is an essential step to do after every change in the **schemas** array or any particular schema struct is changed.
 
 ```shell
-reputation-cli prepare
+reputation-cli acm-prepare
 ```
 
 4. Writing `calc` function, the final step is to implement the algorithm function that uses the attestations file to write a formula that calculates reputation score for the user.
